@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HistoryFragment">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/headerHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#184F7A"
+        android:padding="20dp"
+        android:text="Riwayat Booking"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Card untuk menampilkan data riwayat -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerHistory"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detail Reservasi Anda:"
+                android:textColor="#184F7A"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:id="@+id/tv_history_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Belum ada riwayat booking."
+                android:textColor="#333333"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#DDDDDD"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <!-- Tombol Hapus (Data Persistence Delete) -->
+                <Button
+                    android:id="@+id/btn_hapus_booking"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Batalkan Booking"
+                    android:textColor="#D32F2F"
+                    android:visibility="gone" />
+
+                <!-- Tombol Share (Implicit Intent) -->
+                <Button
+                    android:id="@+id/btn_share_booking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:backgroundTint="#184F7A"
+                    android:text="Share"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Ilustrasi jika kosong -->
+    <TextView
+        android:id="@+id/tv_empty_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Tidak ada data untuk ditampilkan"
+        android:alpha="0.5"
+        android:visibility="gone"/>
+
+</RelativeLayout>

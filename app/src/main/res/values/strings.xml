@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">KoopaHotel</string>
+    <string-array name="jenis_kamar">
+        <item>Standard Room - 500000</item>
+        <item>Superior Room - 800000</item>
+        <item>Deluxe Room - 1200000</item>
+        <item>Suite Room - 2000000</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

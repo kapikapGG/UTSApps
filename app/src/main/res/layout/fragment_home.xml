@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HistoryFragment">
+
+    <!-- Header tetap di atas -->
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#184F7A"
+        android:text="KoopaHotel"
+        android:textColor="#FBFAFD"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:textSize="34sp"
+        android:textStyle="italic" />
+
+    <!-- ScrollView agar konten bisa di-scroll di bawah header -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerTitle"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Item Kamar: Standard -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F0F0F0"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Standard Room"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#184F7A"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="134dp"
+                    android:src="@drawable/kmr1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fasilitas: Single Bed, WiFi, AC, TV"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 350.000 / malam"
+                    android:textColor="#D32F2F"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnBookingStandard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Sekarang"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#184F7A"/>
+            </LinearLayout>
+
+            <!-- Item Kamar: Deluxe -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:background="#F0F0F0"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deluxe Room"
+                    android:textColor="#184F7A"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="134dp"
+                    android:src="@drawable/kmr2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Fasilitas: Queen Size Bed, WiFi, AC, Minibar, Shower" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Rp 600.000 / malam"
+                    android:textColor="#D32F2F"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnBookingDeluxe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#184F7A"
+                    android:text="Booking Sekarang" />
+            </LinearLayout>
+
+            <!-- Item Kamar: Suite -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F0F0F0"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Suite Room"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#184F7A"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="134dp"
+                    android:src="@drawable/kmr3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fasilitas: King Size Bed, Living Room, Kitchenette, Bathtub"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 1.200.000 / malam"
+                    android:textColor="#D32F2F"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btnBookingSuite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Booking Sekarang"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#184F7A"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Butuh Bantuan?"
+                android:textColor="#D32F2F"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnCall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#4CAF50"
+                android:onClick="handleCall"
+                android:text="Contact Person" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

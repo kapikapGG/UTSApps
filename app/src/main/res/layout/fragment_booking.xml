@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="ExtraText">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="#184F7A"
+            android:text="KoopaHotel"
+            android:textColor="#FBFAFD"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:textSize="34sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reservasi Kamar Hotel"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp" />
+
+        <!-- EditText: Nama -->
+        <EditText
+            android:id="@+id/edtNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Lengkap"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <!-- EditText: Email (Validation Target) -->
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Alamat Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp" />
+
+        <!-- EditText: Phone (Validation Target: Angka) -->
+        <EditText
+            android:id="@+id/edtPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nomor Telepon"
+            android:inputType="phone"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Tipe Kamar:"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Spinner -->
+        <Spinner
+            android:id="@+id/spinnerKamar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp" />
+        <!--android:entries="@array/tipe_kamar"--> />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sarapan?"
+            android:layout_marginTop="10dp"/>
+
+        <!-- RadioButton -->
+        <RadioGroup
+            android:id="@+id/rgSarapan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/rbYa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya" />
+            <RadioButton
+                android:id="@+id/rbTidak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak" />
+        </RadioGroup>
+
+        <!-- CheckBox -->
+        <CheckBox
+            android:id="@+id/cbExtraBed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tambah Extra Bed" />
+
+        <Button
+            android:id="@+id/btnSimpan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Booking Sekarang" />
+
+        <TextView
+            android:id="@+id/txt_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Harus Lengkap"
+            android:textAlignment="center"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp" />
+
+
+    </LinearLayout>
+</RelativeLayout>
